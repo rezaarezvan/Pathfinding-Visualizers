@@ -12,4 +12,4 @@ Click **Space** or the Run button in the GUI to start
 Also uses [A* Algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to pathfind
 The first click will place the starting node
 The second click will place the end node
-Click **Space* to start
+Click **Space** to start
