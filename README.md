@@ -1,5 +1,15 @@
 # Pathfinding-Visualizers
 
-I java versionen: Shift+S för start noden och Shift+E för slut noden (start and end) sedan space för att starta
+Two program to visualize pathfinding algorithms
 
-I python versionen så är det: Första klicket är start-noden och andra klicket är end-noden. Sedan space för att starta (Lägg till speed function ngn gång)
+## Java Version 
+Uses the [A* Algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to pathfind and Bubble Sort to sort. 
+Click **S + Mouse Button 1** to place Starting node
+Click **E + Mouse Button 1** to place End node
+Click **Space** or the Run button in the GUI to start
+
+## Python Version
+Also uses [A* Algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to pathfind
+The first click will place the starting node
+The second click will place the end node
+Click **Space* to start

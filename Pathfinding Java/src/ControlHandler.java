@@ -13,7 +13,6 @@ import javax.swing.event.ChangeListener;
 /* This class manages all components used on the main
  * control panel (bottom left) Meant to remove some
  * excessive graphics code from "Frame.java" class
- * by Devon Crawford
  */
 public class ControlHandler {
 	private Frame frame;
@@ -38,54 +37,54 @@ public class ControlHandler {
 		// Set up JLabels
 		modeText = new JLabel("Mode: ");
 		modeText.setName("modeText");
-		modeText.setFont(style.bigText);
-		modeText.setForeground(style.darkText);
+		modeText.setFont(Style.bigText);
+		modeText.setForeground(Style.darkText);
 		modeText.setVisible(true);
 		
 		speedT = new JLabel("Speed: ");
 		speedT.setName("speedT");
-		speedT.setFont(style.numbers);
+		speedT.setFont(Style.numbers);
 		speedT.setVisible(true);
 		
 		speedC = new JLabel("50");
 		speedC.setName("speedC");
-		speedC.setFont(style.numbers);
+		speedC.setFont(Style.numbers);
 		speedC.setVisible(true);
 		
 		openT = new JLabel("Open");
 		openT.setName("openT");
-		openT.setFont(style.numbers);
+		openT.setFont(Style.numbers);
 		openT.setVisible(true);
 		
 		openC = new JLabel("0");
 		openC.setName("openC");
-		openC.setFont(style.numbers);
+		openC.setFont(Style.numbers);
 		openC.setVisible(true);
 		
 		closedT = new JLabel("Closed");
 		closedT.setName("closedT");
-		closedT.setFont(style.numbers);
+		closedT.setFont(Style.numbers);
 		closedT.setVisible(true);
 		
 		closedC = new JLabel("0");
 		closedC.setName("closedC");
-		closedC.setFont(style.numbers);
+		closedC.setFont(Style.numbers);
 		closedC.setVisible(true);
 		
 		pathT = new JLabel("Path");
 		pathT.setName("pathT");
-		pathT.setFont(style.numbers);
+		pathT.setFont(Style.numbers);
 		pathT.setVisible(true);
 		
 		pathC = new JLabel("0");
 		pathC.setName("pathC");
-		pathC.setFont(style.numbers);
+		pathC.setFont(Style.numbers);
 		pathC.setVisible(true);
 		
 		noPathT = new JLabel("NO PATH");
 		noPathT.setName("noPathT");
 		noPathT.setForeground(Color.white);
-		noPathT.setFont(style.REALBIGText);
+		noPathT.setFont(Style.biggerText);
 		npD = noPathT.getPreferredSize();
 		
 		// Add JLabels to list
@@ -234,36 +233,36 @@ public class ControlHandler {
 	
 	// Sets text of JLabels to lightText
 	public void hoverColour() {
-		modeText.setForeground(style.lightText);
-		showStepsCheck.setForeground(style.lightText);
-		diagonalCheck.setForeground(style.lightText);
-		trigCheck.setForeground(style.lightText);
-		speed.setForeground(style.lightText);
-		speedT.setForeground(style.lightText);
-		speedC.setForeground(style.lightText);
-		openT.setForeground(style.lightText);
-		openC.setForeground(style.lightText);
-		closedT.setForeground(style.lightText);
-		closedC.setForeground(style.lightText);
-		pathT.setForeground(style.lightText);
-		pathC.setForeground(style.lightText);
+		modeText.setForeground(Style.lightText);
+		showStepsCheck.setForeground(Style.lightText);
+		diagonalCheck.setForeground(Style.lightText);
+		trigCheck.setForeground(Style.lightText);
+		speed.setForeground(Style.lightText);
+		speedT.setForeground(Style.lightText);
+		speedC.setForeground(Style.lightText);
+		openT.setForeground(Style.lightText);
+		openC.setForeground(Style.lightText);
+		closedT.setForeground(Style.lightText);
+		closedC.setForeground(Style.lightText);
+		pathT.setForeground(Style.lightText);
+		pathC.setForeground(Style.lightText);
 	}
 	
 	// Sets text of JLabels to darkText
 	public void nonHoverColour() {
-		modeText.setForeground(style.darkText);
-		showStepsCheck.setForeground(style.darkText);
-		diagonalCheck.setForeground(style.darkText);
-		trigCheck.setForeground(style.darkText);
-		speed.setForeground(style.darkText);
-		speedT.setForeground(style.darkText);
-		speedC.setForeground(style.darkText);
-		openT.setForeground(style.darkText);
-		openC.setForeground(style.darkText);
-		closedC.setForeground(style.darkText);
-		closedT.setForeground(style.darkText);
-		pathT.setForeground(style.darkText);
-		pathC.setForeground(style.darkText);
+		modeText.setForeground(Style.darkText);
+		showStepsCheck.setForeground(Style.darkText);
+		diagonalCheck.setForeground(Style.darkText);
+		trigCheck.setForeground(Style.darkText);
+		speed.setForeground(Style.darkText);
+		speedT.setForeground(Style.darkText);
+		speedC.setForeground(Style.darkText);
+		openT.setForeground(Style.darkText);
+		openC.setForeground(Style.darkText);
+		closedC.setForeground(Style.darkText);
+		closedT.setForeground(Style.darkText);
+		pathT.setForeground(Style.darkText);
+		pathC.setForeground(Style.darkText);
 	}
 	
 	// Adds all components to frame

@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -12,21 +11,13 @@ import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSlider;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
 /* The main graphics class for APathfinding. Controls the window,
- * and all path finding node graphics. Need to work on zoom function,
- * currently only zooms to top left corner rather than towards mouse
- * by Devon Crawford
+ * and all path finding node graphics. 
  */
 public class Frame extends JPanel
 		implements ActionListener, MouseListener, MouseMotionListener, MouseWheelListener, KeyListener {
@@ -42,9 +33,9 @@ public class Frame extends JPanel
 	String mode;
 	
 	Timer timer = new Timer(100, this);
-	int r = randomWithRange(0, 255);
-	int G = randomWithRange(0, 255);
-	int b = randomWithRange(0, 255);
+	int r       = randomWithRange(0, 255);
+	int G       = randomWithRange(0, 255);
+	int b       = randomWithRange(0, 255);
 
 	public static void main(String[] args) {
 		new Frame();
@@ -161,7 +152,7 @@ public class Frame extends JPanel
 		// Draws all open Nodes (path finding nodes)
 		for (int i = 0; i < pathfinding.getOpenList().size(); i++) {
 			Node current = pathfinding.getOpenList().get(i);
-			g.setColor(style.greenHighlight);
+			g.setColor(Style.greenHighlight);
 			g.fillRect(current.getX() + 1, current.getY() + 1, size - 1, size - 1);
 
 			drawInfo(current, g);
@@ -171,7 +162,7 @@ public class Frame extends JPanel
 		for (int i = 0; i < pathfinding.getClosedList().size(); i++) {
 			Node current = pathfinding.getClosedList().get(i);
 
-			g.setColor(style.redHighlight);
+			g.setColor(Style.redHighlight);
 			g.fillRect(current.getX() + 1, current.getY() + 1, size - 1, size - 1);
 
 			drawInfo(current, g);
@@ -181,7 +172,7 @@ public class Frame extends JPanel
 		for (int i = 0; i < pathfinding.getPathList().size(); i++) {
 			Node current = pathfinding.getPathList().get(i);
 
-			g.setColor(style.blueHighlight);
+			g.setColor(Style.blueHighlight);
 			g.fillRect(current.getX() + 1, current.getY() + 1, size - 1, size - 1);
 
 			drawInfo(current, g);
@@ -200,11 +191,11 @@ public class Frame extends JPanel
 		
 		// If control panel is being hovered, change colours
 		if(btnHover) {
-			g.setColor(style.darkText);
+			g.setColor(Style.darkText);
 			ch.hoverColour();
 		}
 		else {
-			g.setColor(style.btnPanel);
+			g.setColor(Style.btnPanel);
 			ch.nonHoverColour();
 		}
 		// Drawing control panel rectangle
@@ -238,10 +229,10 @@ public class Frame extends JPanel
 	// Draws info (f, g, h) on current node
 	public void drawInfo(Node current, Graphics g) {
 		if (size > 50) {
-			g.setFont(style.numbers);
+			g.setFont(Style.numbers);
 			g.setColor(Color.black);
 			g.drawString(Integer.toString(current.getF()), current.getX() + 4, current.getY() + 16);
-			g.setFont(style.smallNumbers);
+			g.setFont(Style.smallNumbers);
 			g.drawString(Integer.toString(current.getG()), current.getX() + 4, current.getY() + size - 7);
 			g.drawString(Integer.toString(current.getH()), current.getX() + size - 26, current.getY() + size - 7);
 		}
