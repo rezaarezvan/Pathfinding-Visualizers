@@ -1,6 +1,6 @@
 # Pathfinding-Visualizers
 
-Two program to visualize pathfinding algorithms
+Two programs to visualize pathfinding algorithms
 
 ## Java Version 
 Uses the [A* Algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to pathfind and Bubble Sort to sort. 
